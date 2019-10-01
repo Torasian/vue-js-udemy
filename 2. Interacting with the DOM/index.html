@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/index.js"></script>
+
+<div id="app">
+    <!-- The link here doesn't work as in Vue JS you are unable to use curly brackets in any html element attribute -->
+    <!-- <a>{{sayHello()}} - <a href="{{link}}">Google</a></p> -->
+
+    <!-- All usages of title get re-rendered once the property changes -->
+    <!-- v-once instructs the elements to just render once -->
+    <h1 v-once>{{title}}</h1>
+
+    <!-- BINDING TO ATTRIBUTES -->
+    <!-- A directive is an instruction you place in your code -->
+    <!-- The directive v-bind tells Vue JS to not use the normal attribute, instead bind it  -->
+    <!-- Tells VUE to bind something to our data -->
+    <p>{{sayHello()}} - <a v-bind:href="link">Google</a></p>
+
+    <hr>
+    <!-- outputing raw HTML. By default VUE.js escapes HTML -->
+    <!-- <p>{{finishedLink}}</p> -->
+
+    <!-- If we actually want to display the html, we use v-html which tells vue js to actually render the HTML code -->
+    <p v-html="finishedLink"></p>
+</div>
