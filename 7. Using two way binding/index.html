@@ -1,0 +1,13 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+
+
+<!-- Output data using interpolation and listen to events. If we want to do both at the 
+    same time, this is called two way data binding -->
+
+<div id="app">
+    <!-- the v-model tells vue js to set up two way data binding for this input.
+    This will out the name is the input field but also update the name everywhere its mentioned-->
+    <input type="text" v-model="name">
+    <p>{{name}}</p>
+</div>
