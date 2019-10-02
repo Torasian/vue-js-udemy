@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+
+<div id="app">
+    <!-- LISTENING TO EVENTS -->
+    <!-- v-on wait for a click event and then calls the method increase -->
+    <!-- <button v-on:click="increase">Click Me</button>
+    <p>{{counter}}</p> -->
+
+    <!-- if we want to specify out own parameter we can do so by passing it inn the function. We can also pass an event in this way -->
+    <!-- Passing you own arguments with events -->
+    <button v-on:click="increase(2, $event )">Click Me</button>
+    <!-- Here we can increment the counter directly through the template -->
+    <button v-on:click="counter++">Click Me</button>
+    <!-- we can also change the value of countre when interpolating -->
+    <p>{{counter * 2 > 10 ? 'Greater than 10:' : 'Smaller than 10'}}</p>
+
+
+    <!-- Getting Event Data from the Event Object -->
+    <p v-on:mousemove="updateCoordinates">Coordinates: {{x}}/{{y}} -
+        <!-- .stop is a modifier and tells vue to stop propagating -->
+        <span v-on:mousemove.stop="">DEAD SPOT</span>
+        <!-- <span v-on:mousemove="dummy">DEAD SPOT</span> -->
+    </p>
+    <!-- using a key moddifier, the user is alerted when then press the enter button -->
+    <input type="text" v-on:keyup.enter="alertMe">
+</div>
