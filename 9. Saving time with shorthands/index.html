@@ -1,0 +1,10 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="index.js"></script>
+
+
+<div id="app">
+    <!-- Instead of v-on, we can use @ -->
+    <button @click="changeLink">Click to change link</button>
+    <!-- Instead of v-bind we can use - -->
+    <a :href="link">Link</a>
+</div>
