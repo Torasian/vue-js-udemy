@@ -1,0 +1,21 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<div id="app">
+    <!-- Here we set our attached red variable to change state. We then bind the class to this property -->
+    <!-- the class name is our key and out condition is attach red -->
+    <!-- <div class="demo" @click="attachRed= !attachRed" :class="{red: attachRed}"></div> -->
+
+    <!-- Here we have blue when attach red is flase and red otherwise -->
+    <!-- <div class="demo" @click="attachRed= !attachRed" :class="{red: attachRed, blue: !attachRed}"></div> -->
+
+    <div class="demo" @click="attachRed= !attachRed" :class="divClasses"></div>
+    <div class="demo" :class="{red: attachRed}"></div>
+    <div class="demo" :class="[color, {red: attachRed}]"></div>
+
+    <!-- USING NAMES -->
+
+    <hr>
+    <input type="text" v-model="color">
+</div>
