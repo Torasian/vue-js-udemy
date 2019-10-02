@@ -1,0 +1,16 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<div id="app">
+
+
+    <div class="demo" :style="{backgroundColor: color}"></div>
+    <div class="demo" :style="myStyle"></div>
+
+    <!-- Styling elements with the array syntax -->
+    <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+    <hr>
+    <input type="text" v-model="color">
+    <input type="text" v-model="width">
+</div>
